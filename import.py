@@ -34,8 +34,8 @@ db_settings = {
     "host": "127.0.0.1",
     "port": 3306,
     "user": "root",
-    "password": "pop12034",
-    "db": "test520",
+    "password": "root",
+    "db": "mysql",
     "charset": "utf8",
 }
 
@@ -46,11 +46,6 @@ try:
             # 讀取 CSV 檔案內容
             rows = csv.reader(csvfile)
             rows = list(rows)
-            # print(rows[0])
-            # # 以迴圈輸出每一列
-            # # "INSERT INTO root_v('Date', 'Time', 'usec', 'SourceIP', 'SourcePort', 'DestinationIP', 'DestinationPort', 'DNS')"
-            # for i in range(len(rows[0])):
-            #   print(rows[0][i])
             s = "INSERT INTO root_v("
             for i in rows[0][1:9]:
                 s += i + ", "
