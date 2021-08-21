@@ -19,9 +19,8 @@ body {
 
    <body>
       <h2>輸入以查詢資料</h2>
-      <img src="{{ url_for('static', filename='images.png') }}">
       <div class="search">
-      <form action="http://localhost:5000/data" method="post">
+      <form action="http://206.189.93.10:8090/data" method="post">
          <label for = "IP">Source IP </label><br>
          <input type = "text" name ="SourceIP" placeholder = "Name" /><br>
          <label for = "start_Time">Time range (from ~ to)</label><br>
