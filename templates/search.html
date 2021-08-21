@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<!--<link rel="stylesheet" href="{{ url_for('static',    filename='/template.css') }}">-->
+<style>
+body {
+    margin: auto;
+    max-width: 580px;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #FFD78C;
+
+}
+
+<!--.search{-->
+<!--        display: flex;-->
+<!--        align-items: center;-->
+<!--     }-->
+</style>
+
+   <body>
+      <h2>輸入以查詢資料</h2>
+      <img src="{{ url_for('static', filename='images.png') }}">
+      <div class="search">
+      <form action="http://localhost:5000/data" method="post">
+         <label for = "IP">Source IP </label><br>
+         <input type = "text" name ="SourceIP" placeholder = "Name" /><br>
+         <label for = "start_Time">Time range (from ~ to)</label><br>
+         <input type = "text" name ="date1" placeholder = "start_time" />
+         <input type = "text" name ="date2" placeholder = "end_time" /><br>
+         <label for = "FQDN">FQDN </label><br>
+         <textarea name ="FQDN" placeholder = "addr"></textarea><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+      </div>
+   </body>
+
+</html>

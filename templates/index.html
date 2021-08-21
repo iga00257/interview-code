@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+      <style>
+body {
+    margin: auto;
+    max-width: 580px;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #FFD78C;
+}
+
+/* 頁腳*/
+footer {
+    color: #888;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+<!--<link rel="stylesheet" href="{{ url_for('static',    filename='/template.css') }}">-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, th, td {
+     margin: auto;
+     padding: 5px;
+     border: 1px solid #FF5809;
+     }
+     thead tr th {
+     width : 100px;
+     }
+     .data{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+</style>
+
+<body>
+    <div class="data">
+        <table>
+            <thead>
+                <tr>
+                    <th >Date</th>
+                    <th>Time</th>
+                    <th>usec</th>
+                    <th>SourceIP</th>
+                    <th>SourcePort</th>
+                    <th>DestinationIP</th>
+                    <th>DestinationPort</th>
+                    <th>DNS</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for data in results %}
+                 <tr>
+                     <td>{{ data[0] }}</td>
+                     <td>{{ data[1] }}</td>
+                     <td>{{ data[2] }}</td>
+                     <td>{{ data[3] }}</td>
+                     <td>{{ data[4] }}</td>
+                     <td>{{ data[5] }}</td>
+                     <td>{{ data[6] }}</td>
+                     <td>{{ data[7] }}</td>
+                 </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+<!--<script>-->
+<!--   let table = document.querySelector('.data table');-->
+<!--    let row = table.insertRow(1);-->
+<!--    let cell1 = row.insertCell(0);-->
+<!--    let cell2 = row.insertCell(1);-->
+<!--    let cell3 = row.insertCell(2);-->
+<!--    cell1.innerHTML = "NEW CELL1";-->
+<!--    cell2.innerHTML = "results";-->
+<!--</script>-->
+
+</html>

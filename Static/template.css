@@ -1,0 +1,16 @@
+/* 整體*/
+body {
+    margin: auto;
+    max-width: 580px;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #FFD78C;
+}
+
+/* 頁腳*/
+footer {
+    color: #888;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+}

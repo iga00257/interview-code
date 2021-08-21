@@ -1,0 +1,33 @@
+      <style>
+body {
+    margin: auto;
+    max-width: 580px;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #FFD78C;
+}
+.login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+
+/* 頁腳*/
+footer {
+    color: #888;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+<div class="login">
+  <form action = "http://127.0.0.1:5000/login" method = "POST">
+<!--      <link rel="stylesheet" href="{{ url_for('static',    filename='/template.css') }}">-->
+
+      <h2>請輸入帳號密碼登入</h2>
+      <img src="{{ url_for('static', filename='login.png') }}">
+     <p>User Name <input type = "text" name = "username" /></p>
+      <p>PASSWORD <input type = "password" name = "password" /></p>
+     <p><input type = "submit" value = "submit" /></p>
+  </form>
+</div>
