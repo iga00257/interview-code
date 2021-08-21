@@ -7,11 +7,11 @@ app = Flask(__name__)
 @app.route('/login',methods = ['POST', 'GET'])
 def login():
    if request.method == 'POST':
-      if request.form['username'] == 'admin':
-          if request.form['password'] == 'root':
-              return render_template('search.html')
-          else:
-              return "Wrong account or password"
+     if request.form['username'] == 'admin':
+       if request.form['password'] == 'root':
+         return render_template('search.html')
+       else:
+         return "Wrong account or password"
    else:
       return redirect(url_for('index'))
 
@@ -19,8 +19,8 @@ db_settings = {
     "host": "127.0.0.1",
     "port": 3306,
     "user": "root",
-    "password": "pop12034",
-    "db": "test520",
+    "password": "root",
+    "db": "mysql",
     "charset": "utf8",
 }
 
@@ -70,4 +70,4 @@ def search():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=8090,debug=True)
